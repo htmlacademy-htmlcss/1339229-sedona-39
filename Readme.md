@@ -2,6 +2,7 @@
 
 * Студент: [Надежда Бражникова](https://up.htmlacademy.ru/htmlcss/39/user/1339229).
 * Наставник: [Кексобот].
+* Сайт: [Проект Седона](https://nadezhda1904.github.io/1339229-sedona-39/).
 
 ---
 
