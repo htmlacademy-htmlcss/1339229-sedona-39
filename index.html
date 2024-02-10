@@ -10,13 +10,13 @@
 
     <header class="main-header" data-test="header">
       <nav class="navigation">
-        <a class="navigation-logo">
-          <img class="main-header-logo" src="images/content/logo-sedona.svg" width="140" height="70.05" alt="Логотип Седона">
+        <a class="navigation-logo" href="index.html" aria-current="page">
+          <img class="main-header-logo" src="images/content/logo-sedona.svg" width="140" height="70.05" aria-current="page" alt="Логотип Седона">
         </a>
 
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-carrent" href="index.html" aria-current="page">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">О Седоне</a>
@@ -32,9 +32,9 @@
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-user-link-favorite" href="#">
+            <a class="navigation-user-link navigation-user-link-favorite" href="#" alt="Количество гостиниц в избранном - 12">
               <span class="visually-hidden">Избранное</span>
-              <span class="notificatio-badg">12</span>
+              <span class="notification-badg">12</span>
             </a>
           </li>
         </ul>
@@ -45,7 +45,7 @@
     <main class="main-index" data-test="main">
       <div class="intro" data-test="hero">
         <h1 class="visually-hidden">Седона-городок в Аризоне</h1>
-        <img class="intro-img" src="img/welcome.svg" width="458" height="352" alt="Welcome to Sedona">
+        <img class="intro-img" src="images/content/intro-text.svg" width="458" height="352" alt="Welcome to Sedona">
       </div>
 
       <section class="feature" data-test="advantages">
@@ -161,7 +161,7 @@
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="subscription-inner">
-            <label class="visually-hidden" for="subscription-email">E-mail</label>
+            <label class="visually-hidden" for="subscription-email">Укажите ваш e-mail</label>
             <input type="email" class="email" id="subscription-email" placeholder="Ваш e-mail" required>
           </div>
           <button class="button subscription-button" type="submit">Подписаться</button>
@@ -171,20 +171,20 @@
     </main>
 
     <footer class="page-footer" data-test="footer">
-      <section class="footer-social">
+      <section class="social"> <!--Не используем в названии footer, чтобы при необходимости можно было перенести сети в любое место сайта-->
         <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
+        <ul class="social-list">
+          <li class="social-item">
             <a class="button" href="#">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
-          <li class="footer-social-item">
+          <li class="social-item">
             <a class="button" href="#">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
-          <li class="footer-social-item">
+          <li class="social-item">
             <a class="button" href="#">
               <span class="visually-hidden">YouTube</span>
             </a>
@@ -193,9 +193,9 @@
 
       </section>
 
-      <a class="footer-fon" href="tel:+74956660266">+7 (812) 812-12-12</a>
-      <a class="footer-copyright" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="images/content/logo-htmlacademy.svg" width="114.9" height="32.9" alt="Посетить сайт разработчика HTML Academy">
+      <a class="fon" href="tel:+74956660266">+7 (812) 812-12-12</a><!--Не используем в названии footer, чтобы при необходимости можно было перенести телефон в любое место сайта-->
+      <a class="copyright" href="https://htmlacademy.ru/"><!--Не используем в названии footer, чтобы при необходимости можно было перенести копирайт в любое место сайта-->
+        <img class="htmlacademy-logo" src="images/content/logo-htmlacademy.svg" width="114.9" height="32.9" alt="Логотип HTML Academy. Посетить сайт разработчика HTML Academy">
       </a>
 
     </footer>
