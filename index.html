@@ -11,12 +11,11 @@
     <div class="site-container">
 
       <header class="main-header" data-test="header">
-
+        <a class="navigation-logo" href="index.html" aria-current="page">
+          <img class="main-header-logo" src="images/content/logo-sedona.svg" width="140" height="70"
+            aria-current="page" alt="Логотип Седона">
+        </a>
         <nav class="navigation">
-          <a class="navigation-logo" href="index.html" aria-current="page">
-            <img class="main-header-logo" src="images/content/logo-sedona.svg" width="140" height="70" aria-current="page"
-              alt="Логотип Седона">
-          </a>
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-carrent" href="index.html" aria-current="page">Главная</a>
@@ -28,29 +27,33 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-user">
+
+          <ul class="navigation-user-list">
             <li class="navigation-user-item">
               <a class="navigation-user-link navigation-user-link-search" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                  <path fill="#000" d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
+                </svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link navigation-user-link-favorite" href="#"
-                alt="Количество гостиниц в избранном - 12">
+              aria-label="Количество гостиниц в избранном - 12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                <path fill="#000" d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+              </svg>
                 <span class="visually-hidden">Избранное</span>
                 <span class="notification-badg">12</span>
               </a>
             </li>
-            <li class="navigation-user-item">
-              <a class="button navigation-search" href="#search">Хочу сюда</a>
-            </li>
           </ul>
+          <a class="button navigation-search" href="#search">Хочу сюда!</a>
 
         </nav>
-
       </header>
 
-      <main class="main-index" data-test="main">
+      <main class="main-container main-index" data-test="main">
         <div class="intro" data-test="hero">
           <h1 class="visually-hidden">Седона-городок в Аризоне</h1>
           <img class="intro-img" src="images/content/intro-text.svg" width="458" height="352" alt="Welcome to Sedona">
@@ -64,15 +67,15 @@
             </p>
           </div>
           <ul class="feature-list">
-            <li class="feature-item feature-item-dark">
-              <div class="feature-item-flex">
+            <li class="feature-item-dark">
+
                 <div class="feature-item-wrapper">
                   <h3 class="feature-title">Настоящий<br> городок</h3>
 
                   <p class="feature-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <img src="images/content/feature/feature-hotel.jpg" width="800" height="385" alt="Мотель в Седоне">
-              </div>
+
             </li>
             <li class="feature-item feature-item-light">
               <h3 class="feature-title">Небольшая<br>площадь</h3>
@@ -89,8 +92,8 @@
 
               <p class="feature-text">Большинство едет в Гранд-Каньон и толпится там</p>
             </li>
-            <li class="feature-item feature-item-dark">
-              <div class="feature-item-flex">
+            <li class="feature-item-dark">
+
                 <img src="images/content/feature/feature-mountains.jpg" width="800" height="385" alt="Мост дьявола">
                 <div class="feature-item-wrapper">
                   <h3 class="feature-title">Там есть<br> мост дьявола</h3>
@@ -98,7 +101,7 @@
                   <p class="feature-text advantage-position">Да, по нему можно пройти! Если вы осмелитесь, разумеется
                   </p>
                 </div>
-              </div>
+
             </li>
           </ul>
         </section>
@@ -128,12 +131,12 @@
           </ul>
         </section>
 
-        <section class="search" id="search" data-test="search">
+        <section class="search" data-test="search">
           <div class="search-wrapper">
             <h2 class="title search-title">Заинтересовались?</h2>
             <p class="subtitle search-description">Укажите предполагаемые даты поездки,
               и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button search-button" href="#">Поиск гостиницы в Седоне</a>
+            <a class="button search-button" href="#" id="search">Поиск гостиницы в Седоне</a>
           </div>
           <div class="search-form-wrapper">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -186,7 +189,7 @@
           <form class="subscription-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <div class="subscription-inner">
               <label class="visually-hidden" for="subscription-email">Укажите ваш e-mail</label>
-              <input class="email" type="email" id="subscription-email" placeholder="Ваш e-mail" required>
+              <input class="input-email" type="email" id="subscription-email" placeholder="Ваш e-mail" required>
             </div>
             <button class="button subscription-button" type="submit">Подписаться</button>
           </form>
@@ -236,7 +239,7 @@
             812-12-12</a><!--Не используем в названии footer, чтобы при необходимости можно было перенести телефон в любое место сайта-->
           <a class="copyright"
             href="https://htmlacademy.ru/"><!--Не используем в названии footer, чтобы при необходимости можно было перенести копирайт в любое место сайта-->
-            <img class="htmlacademy-logo" src="images/content/logo-htmlacademy.svg" width="114.9" height="32.9"
+            <img class="htmlacademy-logo" src="images/content/logo-htmlacademy.svg" width="115" height="33"
               alt="Логотип HTML Academy. Посетить сайт разработчика HTML Academy">
           </a>
         </div>
