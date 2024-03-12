@@ -43,8 +43,7 @@ img {
 
 .site-container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -96,7 +95,6 @@ img {
 .button-first:hover,
 .button-first:focus-visible {
   background-color: #615048;
-  outline: none;
 }
 
 .button-second {
@@ -106,12 +104,13 @@ img {
 .button-second:hover,
 .button-second:focus-visible {
   background-color: #68A2CA;
-  outline: none;
 }
 
 .input-form {
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
 
   border: none;
@@ -119,7 +118,9 @@ img {
   border-radius: 4px;
   background-color: #F2F2F2;
 
-  appearance: textfield;
+  -webkit-appearance: textfield;
+
+          appearance: textfield;
   cursor: pointer;
 }
 
@@ -142,7 +143,7 @@ img {
 .main-header {
   display: flex;
   align-items: flex-start;
-  column-gap: 29px;
+  column-gap: 28px;
 
   width: 1060px;
   margin: 0 auto;
@@ -196,7 +197,6 @@ img {
 
 .navigation-link:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .navigation-link:active {
@@ -246,7 +246,6 @@ img {
 
 .navigation-user-link:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .navigation-user-link:active {
@@ -291,30 +290,27 @@ img {
 }
 
 .intro {
-  height: 485px;
+  padding-top: 51px;
+  padding-bottom: 82px;
+
   background-color: #5496bd;
   background-image:
     url("../images/decorate/intro/intro-pattern.svg"),
     url("../images/decorate/intro/intro-background.jpg");
   background-size: 100% auto, cover;
-  background-repeat: no-repeat;
-  background-position: left bottom, left top;
+  background-repeat: no-repeat no-repeat;
+  background-position: center bottom, center center;
 }
 
 .intro-img {
   display: block;
-
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
+  margin: 0 auto;
 }
 
 /*преимущества*/
 .feature-intro-text {
   min-width: 216px;
-  padding-top: 71px;
-  padding-bottom: 90px;
+  padding: 69px 270px 90px 270px;
 
   text-align: center;
 }
@@ -338,15 +334,6 @@ img {
 
 .feature-intro-title {
   margin-bottom: 25px;
-  padding-left: 290px;
-  padding-right: 290px;
-}
-
-.feature-intro-subtitle {
-  margin: 0;
-
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .feature-title {
@@ -414,8 +401,6 @@ img {
   min-height: 385px;
   margin: 0;
   padding: 102px 85px;
-
-  background-color: rgba(130, 179, 211, 0.2);
 }
 
 .feature-item-wrapper {
@@ -438,7 +423,11 @@ img {
   background-color: rgba(130, 179, 211);
 }
 
-.feature-item-light {
+.feature-item:nth-child(2n+1) {
+  background-color: rgba(130, 179, 211, 0.2);
+}
+
+.feature-item:nth-child(2n) {
   background-color: rgba(130, 179, 211, 0.12);
 }
 
@@ -454,8 +443,7 @@ img {
 
 .infrastructure-intro-text {
   min-width: 216px;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 64px 341px;
 
   text-align: center;
 
@@ -464,8 +452,6 @@ img {
 
 .infrastructure-intro-title {
   margin-bottom: 20px;
-  padding-left: 350px;
-  padding-right: 350px;
 }
 
 .infrastructure-list {
@@ -490,29 +476,31 @@ img {
 
   text-align: center;
 
-  background-size: 75px 72px;
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: center 80px;
 }
 
 .infrastructure-item:nth-child(2n+1) {
-  background-color: rgba(130, 179, 211, 0.2);
+  background-color: rgba(130, 179, 211, 0.12);
 }
 
 .infrastructure-item:nth-child(2n) {
-  background-color: rgba(130, 179, 211, 0.12);
+  background-color: #ffffff;
 }
 
 .infrastructure-item-housing {
   background-image: url("../images/decorate/infrastructure/housing.svg");
+  background-position: center 81px;
 }
 
 .infrastructure-item-food {
   background-image: url("../images/decorate/infrastructure/food.svg");
+  background-position: center 82px;
 }
 
 .infrastructure-item-gift {
   background-image: url("../images/decorate/infrastructure/souvenir.svg");
+  background-position: center 79px
 }
 
 .infrastructure-title {
@@ -563,8 +551,8 @@ img {
 .subscription {
   padding-top: 96px;
   padding-bottom: 104px;
-  padding-left: 260px;
-  padding-right: 260px;
+  padding-left: 255px;
+  padding-right: 255px;
 
   text-align: center;
 }
@@ -600,10 +588,6 @@ img {
   margin: 0;
   padding: 14px 20px;
 
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
-
   border-radius: 4px 0 0 4px;
 }
 
@@ -624,6 +608,7 @@ img {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 
   width: 1060px;
   margin: 0 auto;
@@ -634,14 +619,13 @@ img {
 .social {
   display: flex;
   align-items: center;
-
-  max-width: 142px;
 }
 
 .social-list {
   display: flex;
   flex-wrap: wrap;
 
+  width: 142px;
   margin: 0;
   padding: 0;
 
@@ -667,34 +651,39 @@ img {
 .social-link:hover,
 .social-link:focus-visible {
   color: #68A2CA;
-  outline: none;
 }
 
 .social-link:active {
   color: rgba(104, 162, 202, 0.3);
 }
 
-.phone {
+.contacts-address {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 
-  max-width: 680px;
+  max-width: 720px;
+
+  font-style: normal;
+}
+
+.contacts-phone {
+  padding: 6px;
 
   font-size: 40px;
   line-height: 40px;
-  text-decoration-line: none;
+   -moz-text-decoration-line: none;
+        text-decoration-line: none;
   text-transform: uppercase;
   color: #242424;
 }
 
-.phone:hover,
-.phone:focus-visible {
+.contacts-phone:hover,
+.contacts-phone:focus-visible {
   color: #756157;
-  outline: none;
 }
 
-.phone:active {
+.contacts-phone:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
@@ -712,7 +701,6 @@ img {
 
 .copyright:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .copyright:active {
@@ -735,24 +723,22 @@ img {
   display: none;
 }
 
-
 /*форма поиска гостиниц*/
 .modal {
   position: relative;
   margin: auto;
+  margin-top: 396px;
   padding: 40px;
   background-color: #ffffff;
 }
 
 .search-form-wrapper {
-  position: relative;
-
   box-sizing: border-box;
   width: 717px;
   min-height: 576px;
   padding: 64px 70px;
 
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -861,18 +847,22 @@ img {
 
 .help-for-input-error {
   display: block;
+
+  font-size: 16px;
   color: #FF5757;
 }
 
 .help-for-input-correct {
   display: block;
+
+  font-size: 16px;
   color: #000000;
 }
 
 .calendar {
   position: absolute;
-  right: 14px;
-  top: 30%;
+  right: 22px;
+  top: 16px;
   padding: 0;
 
   color: rgba(0, 0, 0, 0.3);
@@ -883,8 +873,8 @@ img {
 }
 
 .calendar svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 15px;
 }
 
 .search-form-people {
@@ -967,6 +957,8 @@ img {
 
   font-size: 20px;
   line-height: 24px;
+
+  border-radius: 10px;
 }
 
 /*тултип*/
@@ -1047,8 +1039,7 @@ img {
 
 /*каталог*/
 .inner-header {
-  margin-bottom: 50px;
-  padding-top: 35px;
+  padding-top: 36px;
   padding-bottom: 70px;
 
   color: #ffffff;
@@ -1080,7 +1071,7 @@ img {
 
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   list-style-type: none;
 }
@@ -1091,11 +1082,10 @@ img {
   align-items: center;
 }
 
-
 .breadcrumbs-item:not(:last-child)::after {
   content: "";
 
-  width: 29px;
+  width: 28px;
   height: 10px;
 
   background-image: url("../images/decorate/filter/arrow-right.svg");
@@ -1162,14 +1152,16 @@ img {
 .filter-label {
   display: flex;
   justify-content: flex-start;
-  gap: 18px;
+  gap: 16px;
 
+  cursor: pointer;
+}
+
+.filter-label-text {
   box-sizing: border-box;
 
   font-size: 18px;
   line-height: 23px;
-
-  cursor: pointer;
 }
 
 .filter-label:hover {
@@ -1180,49 +1172,57 @@ img {
   opacity: 60%;
 }
 
-.check-box {
+.check {
+  position: relative;
   flex-shrink: 0;
 
   width: 20px;
   height: 20px;
-  margin-top: 1px;
+  margin-top: 2px;
 
   border: none;
-  border-radius: 4px;
   background-color: #ffffff;
 }
 
-.filter-input-checkbox:checked + .check-box {
-  background-image: url("../images/decorate/filter/checked.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.filter-input:focus + .check {
+  outline: 3px solid #83B3D3;
 }
 
-.filter-input-checkbox:focus + .check-box {
-  outline: 3px solid #83B3D3;
+.check-box {
+  border-radius: 4px;
+}
+
+.filter-input[type="checkbox"]:checked + .check-box::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+
+  content: "";
+  width: 13px;
+  height: 11px;
+
+  background-image: url("../images/decorate/filter/checked.svg");
+  background-repeat: no-repeat;
 }
 
 .radio-check {
-  flex-shrink: 0;
-
-  width: 20px;
-  height: 20px;
-
-  border: none;
   border-radius: 50%;
-  background-color: #ffffff;
 }
 
-.filter-input-radio:focus + .radio-check {
-  outline: 3px solid #83B3D3;
-}
+.filter-input[type="radio"]:checked + .radio-check::after {
+  position: absolute;
+  top: 23%;
+  left: 23%;
 
-.filter-input-radio:checked + .radio-check {
+  content: "";
+  width: 11px;
+  height: 11px;
+
   background-image: url("../images/decorate/filter/check-radio.svg");
   background-repeat: no-repeat;
-  background-position: center;
 }
 
+/*цена*/
 .filter-price {
   justify-self: end;
   grid-column: 3 / 4;
@@ -1253,14 +1253,19 @@ img {
 .price-input {
   width: 100%;
   margin: 0;
-  padding: 12px 20px;
+  padding: 12px 21px;
   padding-right: 50px;
 
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
   font-weight: 700;
   color: #000000;
+}
+
+/*отключает стрелочки в инпутах*/
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
 }
 
 .price-input-left {
@@ -1288,7 +1293,7 @@ img {
 }
 
 /*range-bar цены фильтра*/
-.slider-scale-wrapper {
+.slider-scale {
   position: relative;
   height: 4px;
 
@@ -1298,7 +1303,6 @@ img {
 
 .slider-bar {
   position: absolute;
-  width: 226px;
   height: 4px;
   background-color: #ffffff;
 }
@@ -1373,9 +1377,7 @@ img {
 
 /*список найденных отелей*/
 .catalog-hotels {
-  margin-bottom: 60px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 50px 70px 60px;
 
   background-color: rgba(255, 255, 255, 1);
 }
@@ -1398,15 +1400,24 @@ img {
 }
 
 /*селектор*/
-.select-control {
-  box-sizing: border-box;
+.select {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
   width: 292px;
-  padding: 12px 19px;
+}
+
+.select-control {
+  width: 100%;
+  padding: 12px 18px;
+  padding-right: 54px;
 
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: inherit;
   color: inherit;
 
   border: 2px solid #E5E5E5;
@@ -1417,7 +1428,9 @@ img {
   background-repeat: no-repeat;
   background-position: right 18px center;
 
-  appearance: none;
+  -webkit-appearance: none;
+
+          appearance: none;
 }
 
 .select-control:hover,
@@ -1444,6 +1457,7 @@ img {
 /*переключатели отображения*/
 .view-buttons-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 
   width: 160px;
@@ -1688,8 +1702,6 @@ img {
 .pagination-link:focus-visible {
   background-color: #68A2CA;
   border-color: #82B3D3;
-
-  outline: none;
 }
 
 .pagination-link:active {

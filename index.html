@@ -31,7 +31,7 @@
 
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-user-link-search" href="#">
+              <a class="navigation-user-link" href="#">
                 <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -41,8 +41,7 @@
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-user-link-favorite" href="#"
-                aria-label="Количество гостиниц в избранном - 12">
+              <a class="navigation-user-link" href="#" aria-label="Количество гостиниц в избранном - 12">
                 <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -58,7 +57,7 @@
         </nav>
       </header>
 
-      <main class="main-container main-index" data-test="main">
+      <main class="main-container" data-test="main">
         <div class="intro" data-test="hero">
           <h1 class="visually-hidden">Седона-городок в Аризоне</h1>
           <img class="intro-img" src="images/content/intro-text.svg" width="458" height="352" alt="Welcome to Sedona">
@@ -68,70 +67,68 @@
           <div class="feature-intro-text">
             <h2 class="visually-hidden">Преимущества</h2>
             <p class="title feature-intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-            <p class="subtitle feature-intro-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+            <p class="subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
             </p>
           </div>
-          <ul class="feature-list">
-            <li class="feature-item-dark">
 
+          <ul class="feature-list">
+
+            <li class="feature-item-dark">
               <div class="feature-item-wrapper">
                 <h3 class="feature-title">Настоящий<br> городок</h3>
-
                 <p class="feature-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="feature-image" src="images/content/feature/feature-hotel.jpg" width="800" height="385"
                 alt="Мотель в Седоне">
-
             </li>
-            <li class="feature-item feature-item-light">
-              <h3 class="feature-title">Небольшая<br>площадь</h3>
 
+            <li class="feature-item">
+              <h3 class="feature-title">Небольшая<br>площадь</h3>
               <p class="feature-text">Все достопримечательности находятся очень близко</p>
             </li>
+
             <li class="feature-item">
               <h3 class="feature-title">Красивая<br>дорога</h3>
-
               <p class="feature-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="feature-item feature-item-light">
+
+            <li class="feature-item">
               <h3 class="feature-title">Мало<br>туристов</h3>
-
-              <p class="feature-text">Большинство едет в Гранд-Каньон и толпится там</p>
+              <p class="feature-text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="feature-item-dark">
 
+            <li class="feature-item-dark">
               <img src="images/content/feature/feature-mountains.jpg" width="800" height="385" alt="Мост дьявола">
               <div class="feature-item-wrapper">
                 <h3 class="feature-title">Там есть<br> мост дьявола</h3>
-
                 <p class="feature-text advantage-position">Да, по нему можно пройти! Если вы осмелитесь, разумеется
                 </p>
               </div>
-
             </li>
+
           </ul>
         </section>
 
-        <section class="infrastructure">
+        <section class="infrastructure" data-test="service">
 
           <div class="infrastructure-intro-text">
             <h2 class="visually-hidden">Инфраструктура</h2>
             <p class="title infrastructure-intro-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-            <p class="subtitle infrastructure-intro-subtitle">Опытный персонал и качественное обслуживание!</p>
+            <p class="subtitle">Опытный персонал и качественное обслуживание!</p>
           </div>
 
           <ul class="infrastructure-list">
-            <li class="infrastructure-item infrastructure-item-housing align">
+            <li class="infrastructure-item infrastructure-item-housing">
               <h4 class="infrastructure-title">Жильё</h4>
               <p class="infrastructure-discription">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
             </li>
-            <li class="infrastructure-item infrastructure-item-food align">
+            <li class="infrastructure-item infrastructure-item-food">
               <h4 class="infrastructure-title">Еда</h4>
               <p class="infrastructure-discription">Всегда заказывайте<br> топовый фирменный бургер, вы не
                 разочаруетесь!
               </p>
             </li>
-            <li class="infrastructure-item infrastructure-item-gift align">
+            <li class="infrastructure-item infrastructure-item-gift">
               <h4 class="infrastructure-title">Сувениры</h4>
               <p class="infrastructure-discription">Не только китайского,<br> но и настоящего местного производства!</p>
             </li>
@@ -152,11 +149,9 @@
           <p class="subtitle subscription-text">Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <div class="subscription-inner">
-              <label class="visually-hidden" for="subscription-email">Укажите ваш e-mail</label>
-              <input class="input-form input-email" type="email" id="subscription-email" placeholder="Ваш e-mail"
-                required>
-            </div>
+            <label class="visually-hidden" for="subscription-email">Укажите ваш e-mail</label>
+            <input class="input-form input-email" type="email" id="subscription-email" placeholder="Ваш e-mail"
+              required>
             <button class="button button-second subscription-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -204,8 +199,10 @@
 
           </section>
 
-          <a class="phone" href="tel:+74956660266">+7 (812)
-            812-12-12</a><!--Не используем в названии footer, чтобы при необходимости можно было перенести телефон в любое место сайта-->
+          <address class="contacts-address">
+            <a class="contacts-phone" href="tel:+74956660266">+7 (812)
+              812-12-12</a><!--Не используем в названии footer, чтобы при необходимости можно было перенести телефон в любое место сайта-->
+          </address>
           <a class="copyright"
             href="https://htmlacademy.ru/"><!--Не используем в названии footer, чтобы при необходимости можно было перенести копирайт в любое место сайта-->
             <span class="visually-hidden">Логотип HTML Academy. Посетить сайт разработчика HTML Academy</span>
@@ -229,7 +226,7 @@
             </svg>
 
           </button>
-          <h2 class="search-form-title">Поиск гостиниц в Седоне</h2>
+          <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
 
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -237,7 +234,7 @@
               <label class="form-label" for="search-date-in">Дата Заезда:</label>
 
               <div class="date-input-wrapper">
-                <input class="input-form" type="text" name="date-in" id="search-date-in" value="20 апреля 2020">
+                <input class="input-form" type="text" name="date-in" id="search-date-in" value="27 апреля 2020">
                 <p class="help-for-input help-for-input-error">Мы не можем отправить вас в прошлое.</p>
                 <button class="calendar" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
